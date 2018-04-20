@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: bluespringboot
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: bluemac
+Implementation-Vendor-Id: com.example
+Build-Jdk: 1.8.0_151
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/bluespringboot
+Created-By: Maven Integration for Eclipse
+
