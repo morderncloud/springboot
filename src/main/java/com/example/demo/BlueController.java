@@ -6,15 +6,14 @@ import java.util.Set;
 
 import javax.annotation.PostConstruct;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import domain.Cart;
 import domain.Product;
 
-@Controller
+@RestController
 public class BlueController {
 	
 	private Cart cart;
@@ -35,7 +34,7 @@ public class BlueController {
 	}
 	
 	@RequestMapping("/cart")
-	public @ResponseBody Cart listCart() {
+	public Cart listCart() {
 		return cart;
 	}
 
