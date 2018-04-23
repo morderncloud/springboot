@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Product {
+public class Productitem {
 
 	@Id @GeneratedValue
 	private Long id;
@@ -13,12 +13,12 @@ public class Product {
 	private String name;
 	private int amt;
 	
-	public Product() {
+	public Productitem() {
 		super();
 		
 	}
 	
-	public Product(String name, int amt) {
+	public Productitem(String name, int amt) {
 		this();
 		this.name = name;
 		this.amt = amt;

@@ -16,8 +16,16 @@ public class Cart {
 	
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="cartId")
-	private Set<Product> products;
+	private Set<Productitem> productitems;
 	
+	public Set<Productitem> getProductitems() {
+		return productitems;
+	}
+
+	public void setProductitems(Set<Productitem> productitems) {
+		this.productitems = productitems;
+	}
+
 	private String name;
 	
 	@Id @GeneratedValue
@@ -29,11 +37,11 @@ public class Cart {
 		super();
 	}
 	
-	public Cart(String name, Set<Product> products) {
+	public Cart(String name, Set<Productitem> products) {
 		this();
 		this.name = name;
 		//this.id = id;
-		this.setProducts(products);
+		this.setProductitems(products);
 	}
 
 	public String getName() {
@@ -46,12 +54,6 @@ public class Cart {
 
 
 
-	public Set<Product> getProducts() {
-		return products;
-	}
 
-	public void setProducts(Set<Product> products) {
-		this.products = products;
-	}
 
 }

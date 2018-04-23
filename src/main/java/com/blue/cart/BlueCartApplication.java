@@ -36,9 +36,9 @@ public class BlueCartApplication extends SpringBootServletInitializer{
 	
 	@PostConstruct
 	public void blInit() {
-		Set<Product> products = new HashSet<>();
-		products.add(new Product("Roadster", 10));
-		products.add(new Product("ModelX", 20));
+		Set<Productitem> products = new HashSet<>();
+		products.add(new Productitem("Roadster", 10));
+		products.add(new Productitem("ModelX", 20));
 		
 		Cart cart = new Cart("BlueCart", products);
 		cartDao.save(cart);

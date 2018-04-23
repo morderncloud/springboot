@@ -26,9 +26,9 @@ public class CartController {
 	
 	@RequestMapping("/cart")
 	public Cart listCart() {
-		Set<Product> products = new HashSet<>();
-		products.add(new Product("BMW 730", 10));
-		products.add(new Product("Benz", 20));
+		Set<Productitem> products = new HashSet<>();
+		products.add(new Productitem("BMW 730", 10));
+		products.add(new Productitem("Benz", 20));
 		
 		Cart cart = new Cart("RedCart", products);
 		
