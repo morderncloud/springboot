@@ -1,24 +1,38 @@
-package domain;
+package com.blue.cart;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
+@Entity
 public class Cart {
 	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="cartId")
 	private Set<Product> products;
 	
 	private String name;
-	private int id;
 	
+	@Id @GeneratedValue
+	private Long id;
+	
+	
+
 	public Cart() {
-		
+		super();
 	}
 	
-	public Cart(String name, int id, Set<Product> products) {
+	public Cart(String name, Set<Product> products) {
+		this();
 		this.name = name;
-		this.id = id;
+		//this.id = id;
 		this.setProducts(products);
 	}
 
@@ -30,13 +44,7 @@ public class Cart {
 		this.name = name;
 	}
 
-	public int getId() {
-		return id;
-	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public Set<Product> getProducts() {
 		return products;
