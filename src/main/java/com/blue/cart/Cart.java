@@ -33,12 +33,20 @@ public class Cart {
 	
 	
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public Cart() {
-		super();
+		
 	}
 	
 	public Cart(String name, Set<Productitem> products) {
-		this();
+		
 		this.name = name;
 		//this.id = id;
 		this.setProductitems(products);

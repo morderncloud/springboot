@@ -10,16 +10,23 @@ public class Productitem {
 	@Id @GeneratedValue
 	private Long id;
 	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 	private String name;
 	private int amt;
 	
 	public Productitem() {
-		super();
+
 		
 	}
 	
 	public Productitem(String name, int amt) {
-		this();
+
 		this.name = name;
 		this.amt = amt;
 	}

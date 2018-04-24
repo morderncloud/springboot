@@ -14,9 +14,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 
 public class BlueCartApplication extends SpringBootServletInitializer{
-	
-	@Autowired
-	CartDao cartDao;
+
 
 	/**
 	 * JAR
@@ -43,4 +41,8 @@ public class BlueCartApplication extends SpringBootServletInitializer{
 		Cart cart = new Cart("BlueCart", products);
 		cartDao.save(cart);
 	}
+	
+	
+	@Autowired
+	private CartDao cartDao;
 }
